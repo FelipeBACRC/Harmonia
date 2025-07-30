@@ -25,7 +25,7 @@ function BarraNavegacion($nombre = "", $apellido = "", $email = "", $id = null)
     <div class="container-fluid d-none d-lg-block">
         <div class="row align-items-center py-4 px-xl-5">
             <div class="col-lg-3">
-                <a href="principal.php" class="text-decoration-none">
+                <a href="../Home/principal.php" class="text-decoration-none">
                     <h1 class="m-0"><span class="text-primary">Charlenne </span>Stewart Academy</h1>
                 </a>
             </div>
@@ -63,7 +63,7 @@ function BarraNavegacion($nombre = "", $apellido = "", $email = "", $id = null)
     <div class="container-fluid">
         <div class="row border-top px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
-                <a class="d-flex align-items-center justify-content-between bg-secondary w-100 text-decoration-none" data-toggle="collapse" href="#navbar-vertical" style="height: 67px; padding: 0 30px;">
+               <a class="d-flex align-items-center justify-content-between bg-secondary w-100 text-decoration-none" data-bs-toggle="collapse" href="#navbar-vertical" style="height: 67px; padding: 0 30px;">
                     <h5 class="text-primary m-0"><i class="fa fa-book-open mr-2"></i>Clases</h5>
                     <i class="fa fa-angle-down text-primary"></i>
                 </a>
@@ -91,13 +91,14 @@ function BarraNavegacion($nombre = "", $apellido = "", $email = "", $id = null)
                     <a href="#" class="text-decoration-none d-block d-lg-none">
                         <h1 class="m-0"><span class="text-primary">CHARLENNE</span></h1>
                     </a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="navbar-nav py-0">
                             <a href="index.php" class="nav-item nav-link active">Home</a>
-                            <a href="about.php" class="nav-item nav-link">Sobre Nosotros</a>
+                            <a href="../GestionAcademica/AdministrarMatricula.php" class="nav-item nav-link">Gestion Academica</a>
                             <a href="course.php" class="nav-item nav-link">Clases</a>
                             <a href="mis-cursos.php" class="nav-item nav-link">Mis Cursos</a>
                             <a href="contact.php" class="nav-item nav-link">Contacto</a>
@@ -107,7 +108,7 @@ function BarraNavegacion($nombre = "", $apellido = "", $email = "", $id = null)
                                     <a href="gestion-academica.php" class="dropdown-item">Gestión Académica</a>
                                     <a href="gestion-estudiantes.php" class="dropdown-item">Gestión de Estudiantes</a>
                                     <a href="gestion-profesores.php" class="dropdown-item">Gestión de Profesores</a>
-                                    <a href="usuarios.php" class="dropdown-item">Gestión de Usuarios</a>
+                                    <a href="../Usuario/AdministrarUsuarios.php" class="dropdown-item">Gestión de Usuarios</a>
                                 </div>
                             </div>
                         </div>
@@ -130,8 +131,8 @@ function BarraNavegacion($nombre = "", $apellido = "", $email = "", $id = null)
                                         </li>
                                         <li>';
                                             if ($id !== null) {
-                                                echo '<a class="dropdown-item" href="editar-usuario.php?id=' . urlencode($id) . '">
-                                                    <i class="ti-settings me-2"></i> Editar Usuario
+                                                echo '<a class="dropdown-item" href="../Usuario/EditarPerfil.php">
+                                                    <i class="ti-settings me-2"></i> Editar Perfil
                                                 </a>';
                                             } else {
                                                 echo '<span class="dropdown-item text-danger">ID no disponible</span>';
@@ -159,15 +160,13 @@ function PrintScriptInerno()
 {
     echo '
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="../Scripts/Home/easing.min.js"></script>
     <script src="../Scripts/Home/owl.carousel.min.js"></script>
     <script src="../Scripts/Home/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
-    <script src="~..Scripts/editables.js"></script>
+    <script src="../Scripts/editables.js"></script>
     <script src="../Scripts/Cursos/dataTable.js"></script>
 </body>'
     ;
