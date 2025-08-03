@@ -3,9 +3,9 @@ include_once $_SERVER["DOCUMENT_ROOT"] . "/Harmonia/View/LayoutInterno.php";
 
 // Datos simulados
 $estudiantes = [
-    ['id' => 1, 'nombre' => 'Juan Pérez', 'pendiente' => true, 'periodos' => ['2025-I', '2025-II'], 'subtotal' => 500, 'recargo' => 50, 'impuesto' => 40],
+    ['id' => 1, 'nombre' => 'Juan Pérez', 'pendiente' => true, 'periodos' => ['2025-I', '2025-II'], 'subtotal' => 100000, 'recargo' => 5000, 'impuesto' => 0],
     ['id' => 2, 'nombre' => 'María Gómez', 'pendiente' => false, 'periodos' => [], 'subtotal' => 0, 'recargo' => 0, 'impuesto' => 0],
-    ['id' => 3, 'nombre' => 'Luis Rodríguez', 'pendiente' => true, 'periodos' => ['2025-II'], 'subtotal' => 300, 'recargo' => 30, 'impuesto' => 24],
+    ['id' => 3, 'nombre' => 'Luis Rodríguez', 'pendiente' => true, 'periodos' => ['2025-II'], 'subtotal' => 50000, 'recargo' => 2500, 'impuesto' => 0],
 ];
 
 // Parámetros
@@ -112,10 +112,10 @@ function calcularTotal($subtotal, $recargo, $impuesto) {
                         <td><?= $est['id'] ?></td>
                         <td><?= htmlspecialchars($est['nombre']) ?></td>
                         <td><?= $est['pendiente'] ? implode(', ', $est['periodos']) : '-' ?></td>
-                        <td>$<?= number_format($est['subtotal'], 2) ?></td>
-                        <td>$<?= number_format($est['recargo'], 2) ?></td>
-                        <td>$<?= number_format($est['impuesto'], 2) ?></td>
-                        <td>$<?= number_format(calcularTotal($est['subtotal'], $est['recargo'], $est['impuesto']), 2) ?></td>
+                        <td>₡<?= number_format($est['subtotal'], 2) ?></td>
+                        <td>₡<?= number_format($est['recargo'], 2) ?></td>
+                        <td>₡<?= number_format($est['impuesto'], 2) ?></td>
+                        <td>₡<?= number_format(calcularTotal($est['subtotal'], $est['recargo'], $est['impuesto']), 2) ?></td>
                     </tr>
                 <?php endforeach; ?>
                 <?php if(empty($estudiantesFiltrados)): ?>
