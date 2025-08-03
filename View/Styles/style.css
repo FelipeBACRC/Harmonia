@@ -139,7 +139,20 @@ b {
 
 small {
   font-size: 80%; }
+  
+/* Que el dropdown anidado se muestre al hacer hover sobre el padre */
+.dropdown-menu .dropdown:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
 
+/* Para que el sub-dropdown se posicione a la derecha */
+.dropdown-menu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+}
 a {
   color: #7460ee;
   text-decoration: none;

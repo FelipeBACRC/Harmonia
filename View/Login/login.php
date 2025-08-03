@@ -70,7 +70,30 @@
                 </div>
             </div>
         </div>
+            <script>
+document.getElementById("formContacto").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const correo = document.getElementById("correo").value;
+    const mensaje = document.getElementById("mensaje").value;
+    const alerta = document.getElementById("alertaContacto");
+
+    // Simulación de éxito o error
+    if (correo && mensaje) {
+        // Aquí normalmente enviarías los datos por AJAX
+        alerta.className = "alert alert-success";
+        alerta.innerText = "Tu mensaje fue enviado exitosamente. Pronto te contactaremos.";
+        alerta.classList.remove("d-none");
+        this.reset();
+    } else {
+        alerta.className = "alert alert-danger";
+        alerta.innerText = "Ocurrió un error al enviar el mensaje. Inténtalo nuevamente.";
+        alerta.classList.remove("d-none");
+    }
+});
+</script>
     </div>
     <?php PrintFooter(); ?>
     <?php PrintScript(); ?>
+
+
 </main>

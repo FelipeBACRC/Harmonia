@@ -97,20 +97,42 @@ function BarraNavegacion($nombre = "", $apellido = "", $email = "", $id = null)
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="navbar-nav py-0">
-                            <a href="index.php" class="nav-item nav-link active">Home</a>
-                            <a href="../GestionAcademica/AdministrarMatricula.php" class="nav-item nav-link">Gestion Academica</a>
-                            <a href="course.php" class="nav-item nav-link">Clases</a>
-                            <a href="mis-cursos.php" class="nav-item nav-link">Mis Cursos</a>
-                            <a href="contact.php" class="nav-item nav-link">Contacto</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Administración</a>
+                            <a href="../Home/Principal.php" class="nav-item nav-link active">Home</a>
+                             <div class="nav-item dropdown">
+                                <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Profesor</a>
                                 <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="gestion-academica.php" class="dropdown-item">Gestión Académica</a>
-                                    <a href="gestion-estudiantes.php" class="dropdown-item">Gestión de Estudiantes</a>
-                                    <a href="gestion-profesores.php" class="dropdown-item">Gestión de Profesores</a>
+                                    <a href="../Profesor/AsignarTarea.php" class="dropdown-item">Asignar Tareas</a>
+                                    <a href="../Profesor/GestionNotas.php" class="dropdown-item">Gestion de Notas</a>
+                                    <a href="../Profesor/FeedbackEstudiante.php" class="dropdown-item">Retroalimentacio a Estudiantes</a>
+                                    <a href="../Profesor/SeguimientoEstudiante.php" class="dropdown-item">Seguimientos de Estudiantes</a>
+                                </div>
+                                </div>
+                            <div class="nav-item dropdown">
+                                <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Estudiante</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="../Matricula/AdministrarMatricula.php" class="dropdown-item">Matricula</a>
+                                    <a href="../Estudiante/MisClases.php" class="dropdown-item">Mis Clases</a>
+                                    <a href="../Estudiante/MiCalificacion.php" class="dropdown-item">Mis Calificaciones</a>
+                                </div>
+                            </div>
+                            <div class="nav-item dropdown">
+                                <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Administración</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="../Matricula/PeriodosMatricula.php" class="dropdown-item">Periodos de Matrícula</a>
                                     <a href="../Usuario/AdministrarUsuarios.php" class="dropdown-item">Gestión de Usuarios</a>
                                 </div>
                             </div>
+                             <div class="nav-item dropdown">
+                                <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Gestion Financiera</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="../GestionFinanciera/ReportesFinancieros.php" class="dropdown-item">Reportes Financieros</a>
+                                    <a href="../GestionFinanciera/EstadoCuentaEstudiante.php" class="dropdown-item">Estado de Cuenta de Estudiantes</a>
+                                    <a href="../GestionFinanciera/BecaEstudiantil.php" class="dropdown-item">Beca de Estudiantes</a>
+
+
+                                </div>
+                                </div>
+                                      <a href="../Home/Contacto.php" class="nav-item nav-link">Contacto</a>
                         </div>
 
                         <div class="navbar-nav py-0 ml-auto">
@@ -158,18 +180,18 @@ function BarraNavegacion($nombre = "", $apellido = "", $email = "", $id = null)
 
 function PrintScriptInerno()
 {
-    echo '
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+echo '
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script> <!-- ESTA ES LA CLAVE -->
     <script src="../Scripts/Home/easing.min.js"></script>
     <script src="../Scripts/Home/owl.carousel.min.js"></script>
     <script src="../Scripts/Home/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
     <script src="../Scripts/editables.js"></script>
     <script src="../Scripts/Cursos/dataTable.js"></script>
-</body>'
-    ;
+</body>';
+
 }
 
 function PrintFooterInterno()
