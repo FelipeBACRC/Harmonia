@@ -144,7 +144,7 @@ function BarraNavegacion($nombre = "", $apellido = "", $email = "", $id = null)
                             <ul class="navbar-nav float-right">
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle waves-effect waves-dark pro-pic" href="#" data-bs-toggle="dropdown">
-                                        <span class="m-l-5 font-medium d-none d-sm-inline-block">' . htmlspecialchars($nombre) . ' <i class="mdi mdi-chevron-down"></i></span>
+                                        <span class="m-l-5 font-medium d-none d-sm-inline-block">' . htmlspecialchars($nombre) .' '. htmlspecialchars($apellido) . ' <i class="mdi mdi-chevron-down"></i></span>
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-end" style="right: 0; left: auto; z-index: 1050;">
                                         <li>
