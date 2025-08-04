@@ -34,7 +34,7 @@ function BarraNavegacion($nombre = "", $apellido = "", $email = "", $id = null)
                     <i class="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
                     <div class="text-left">
                         <h6 class="font-weight-semi-bold mb-1">Ubicación</h6>
-                        <small>123 Street, New York, USA</small>
+                         <a href="https://maps.app.goo.gl/2vmDt6aQW7717niv9"><small>Av. 3, San José, Desamparados, Lomas de Salitral</small></a>
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@ function BarraNavegacion($nombre = "", $apellido = "", $email = "", $id = null)
                     <i class="fa fa-2x fa-envelope text-primary mr-3"></i>
                     <div class="text-left">
                         <h6 class="font-weight-semi-bold mb-1">Escríbenos</h6>
-                        <small>info@example.com</small>
+                        <small>daurtecalderon@hotmail.com</small>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@ function BarraNavegacion($nombre = "", $apellido = "", $email = "", $id = null)
                     <i class="fa fa-2x fa-phone text-primary mr-3"></i>
                     <div class="text-left">
                         <h6 class="font-weight-semi-bold mb-1">Llámanos</h6>
-                        <small>+012 345 6789</small>
+                        <small>+506 8697 2380</small>
                     </div>
                 </div>
             </div>
@@ -113,6 +113,8 @@ function BarraNavegacion($nombre = "", $apellido = "", $email = "", $id = null)
                                     <a href="../Matricula/AdministrarMatricula.php" class="dropdown-item">Matricula</a>
                                     <a href="../Estudiante/MisClases.php" class="dropdown-item">Mis Clases</a>
                                     <a href="../Estudiante/MiCalificacion.php" class="dropdown-item">Mis Calificaciones</a>
+                                    <a href="../Estudiante/ClaseRefuerzo.php" class="dropdown-item">Gestión Clase de Refuerzo</a>
+
                                 </div>
                             </div>
                             <div class="nav-item dropdown">
@@ -128,6 +130,8 @@ function BarraNavegacion($nombre = "", $apellido = "", $email = "", $id = null)
                                     <a href="../GestionFinanciera/ReportesFinancieros.php" class="dropdown-item">Reportes Financieros</a>
                                     <a href="../GestionFinanciera/EstadoCuentaEstudiante.php" class="dropdown-item">Estado de Cuenta de Estudiantes</a>
                                     <a href="../GestionFinanciera/BecaEstudiantil.php" class="dropdown-item">Beca de Estudiantes</a>
+                                    <a href="../GestionFinanciera/MetodoPago.php" class="dropdown-item">Gestión de Métodos de Pago</a>
+
 
 
                                 </div>
@@ -203,13 +207,12 @@ function PrintFooterInterno()
                 <div class="row">
                     <div class="col-md-6 mb-5">
                         <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Solicita información</h5>
-                        <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-                        <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-                        <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                        <a href="https://maps.app.goo.gl/XWZCu5Wsnkcwbn6P6" class="text-white"><p><i class="fa fa-map-marker-alt mr-2"></i>Av. 3, San José, Desamparados, Lomas de Salitral</p></a>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+506 8697 2380</p>
+                        <p><i class="fa fa-envelope mr-2"></i>daurtecalderon@hotmail.com</p>
                         <div class="d-flex justify-content-start mt-4">
-                            <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-light btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-square mr-2" href="https://www.facebook.com/p/Charlene-Stewart-Academy-100057123414005/?locale=es_LA"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-square" href="https://www.instagram.com/charst.music/?hl=es-la"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                     <div class="col-md-6 mb-5">
