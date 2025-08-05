@@ -39,7 +39,7 @@ $cursos = [
     <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
             <div class="mb-5 position-relative">
-                <a href="CancelarClase.php" class="btn btn-primary position-absolute"
+                <a href="../Clase/CancelarClase.php" class="btn btn-primary position-absolute"
                     style="right: 0; top: 0;">
                     Cancelar Clases
                 </a>
