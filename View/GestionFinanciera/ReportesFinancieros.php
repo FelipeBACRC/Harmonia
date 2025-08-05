@@ -3,8 +3,8 @@ include_once $_SERVER["DOCUMENT_ROOT"] . "/Harmonia/View/LayoutInterno.php";
 
 // Datos simulados de reportes (mes, ingresos, egresos, etc.)
 $reportes = [
-    ['fecha' => '2025-07-31', 'nombre' => 'Reporte Julio 2025', 'balance' => 1500, 'ingresos' => 3000, 'egresos' => 1500, 'pendientes' => 200],
-    ['fecha' => '2025-08-31', 'nombre' => 'Reporte Agosto 2025', 'balance' => 2000, 'ingresos' => 4000, 'egresos' => 2000, 'pendientes' => 100],
+    ['fecha' => '2025-07-31', 'nombre' => 'Reporte Julio 2025', 'balance' => 1500000, 'ingresos' => 300000, 'egresos' => 150000, 'pendientes' => 200000],
+    ['fecha' => '2025-08-31', 'nombre' => 'Reporte Agosto 2025', 'balance' => 2000000, 'ingresos' => 400000, 'egresos' => 20000, 'pendientes' => 100000],
 ];
 
 // Capturar filtros
@@ -75,10 +75,10 @@ if ($generarManual) {
                     <tr>
                         <td><?= htmlspecialchars($r['nombre']) ?></td>
                         <td><?= htmlspecialchars($r['fecha']) ?></td>
-                        <td>$<?= number_format($r['balance'], 2) ?></td>
-                        <td>$<?= number_format($r['ingresos'], 2) ?></td>
-                        <td>$<?= number_format($r['egresos'], 2) ?></td>
-                        <td>$<?= number_format($r['pendientes'], 2) ?></td>
+                        <td>₡<?= number_format($r['balance'], 2) ?></td>
+                        <td>₡<?= number_format($r['ingresos'], 2) ?></td>
+                        <td>₡<?= number_format($r['egresos'], 2) ?></td>
+                        <td>₡<?= number_format($r['pendientes'], 2) ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
