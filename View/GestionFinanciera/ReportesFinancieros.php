@@ -1,13 +1,13 @@
 <?php
 include_once $_SERVER["DOCUMENT_ROOT"] . "/Harmonia/View/LayoutInterno.php";
 
-// Datos simulados de reportes (mes, ingresos, egresos, etc.)
+
 $reportes = [
     ['fecha' => '2025-07-31', 'nombre' => 'Reporte Julio 2025', 'balance' => 1500000, 'ingresos' => 300000, 'egresos' => 150000, 'pendientes' => 200000],
     ['fecha' => '2025-08-31', 'nombre' => 'Reporte Agosto 2025', 'balance' => 2000000, 'ingresos' => 400000, 'egresos' => 20000, 'pendientes' => 100000],
 ];
 
-// Capturar filtros
+
 $rangoInicio = $_GET['fecha_inicio'] ?? '';
 $rangoFin = $_GET['fecha_fin'] ?? '';
 $generarManual = isset($_GET['generar_manual']);
@@ -18,7 +18,7 @@ $reportesFiltrados = $reportes;
 if ($generarManual) {
     $mensaje = "Reporte generado manualmente con éxito.";
 } elseif ($rangoInicio && $rangoFin) {
-    // Filtrar reportes según rango
+
     $reportesFiltrados = array_filter($reportes, function($r) use ($rangoInicio, $rangoFin) {
         return ($r['fecha'] >= $rangoInicio) && ($r['fecha'] <= $rangoFin);
     });

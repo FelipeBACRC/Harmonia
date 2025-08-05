@@ -77,9 +77,9 @@ document.getElementById("formContacto").addEventListener("submit", function(e) {
     const mensaje = document.getElementById("mensaje").value;
     const alerta = document.getElementById("alertaContacto");
 
-    // Simulación de éxito o error
+   
     if (correo && mensaje) {
-        // Aquí normalmente enviarías los datos por AJAX
+   
         alerta.className = "alert alert-success";
         alerta.innerText = "Tu mensaje fue enviado exitosamente. Pronto te contactaremos.";
         alerta.classList.remove("d-none");

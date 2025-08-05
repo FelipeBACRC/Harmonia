@@ -1,15 +1,15 @@
 <?php
 include_once $_SERVER["DOCUMENT_ROOT"] . "/Harmonia/View/LayoutInterno.php";
 
-// Datos simulados
-$becasDisponibles = [0, 25, 50, 75]; // en porcentaje
+
+$becasDisponibles = [0, 25, 50, 75]; 
 $estudiantes = [
     ['id' => 1, 'nombre' => 'Juan Pérez', 'subtotal' => 50000, 'beca' => 25],
     ['id' => 2, 'nombre' => 'María Gómez', 'subtotal' => 50000, 'beca' => 0],
     ['id' => 3, 'nombre' => 'Luis Rodríguez', 'subtotal' => 50000, 'beca' => 50],
 ];
 
-// Procesar formulario simulado (no guarda cambios, solo muestra mensaje)
+
 $mensaje = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $idEstudiante = $_POST['estudiante'] ?? '';

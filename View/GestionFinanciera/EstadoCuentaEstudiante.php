@@ -1,18 +1,18 @@
 <?php
 include_once $_SERVER["DOCUMENT_ROOT"] . "/Harmonia/View/LayoutInterno.php";
 
-// Datos simulados
+
 $estudiantes = [
     ['id' => 1, 'nombre' => 'Juan Pérez', 'pendiente' => true, 'periodos' => ['2025-I', '2025-II'], 'subtotal' => 100000, 'recargo' => 5000, 'impuesto' => 0],
     ['id' => 2, 'nombre' => 'María Gómez', 'pendiente' => false, 'periodos' => [], 'subtotal' => 0, 'recargo' => 0, 'impuesto' => 0],
     ['id' => 3, 'nombre' => 'Luis Rodríguez', 'pendiente' => true, 'periodos' => ['2025-II'], 'subtotal' => 50000, 'recargo' => 2500, 'impuesto' => 0],
 ];
 
-// Parámetros
+
 $seleccionEstudianteId = $_GET['estudiante'] ?? '';
 $filtrarPendientes = isset($_GET['solo_pendientes']);
 
-// Buscar estudiante seleccionado
+
 $estudianteSeleccionado = null;
 foreach ($estudiantes as $est) {
     if ($est['id'] == $seleccionEstudianteId) {
@@ -21,7 +21,7 @@ foreach ($estudiantes as $est) {
     }
 }
 
-// Filtrar estudiantes con pendientes si aplica
+
 $estudiantesFiltrados = $filtrarPendientes 
     ? array_filter($estudiantes, fn($e) => $e['pendiente']) 
     : $estudiantes;

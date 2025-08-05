@@ -80,14 +80,14 @@ $cursosDisponibles = [
                                 </label>
                             </div>
 
-                            <!-- Campo oculto para enviar el horario seleccionado -->
+                            
                             <input type="hidden" name="horarios_<?= $id ?>" id="horario_hidden_<?= $id ?>" value="">
 
                         </div>
                     </div>
                 </div>
 
-                <!-- Modal para seleccionar horarios -->
+              
                 <div class="modal fade" id="modalHorarios_<?= $id ?>" tabindex="-1"
                     aria-labelledby="modalLabel_<?= $id ?>" aria-hidden="true">
                     <div class="modal-dialog">
@@ -125,20 +125,20 @@ $cursosDisponibles = [
         </form>
 
         <script>
-        // Asumiendo Bootstrap 5, aseguramos acceso a Modal
+        
         let modals = {};
 
         function abrirModal(id) {
             const checkbox = document.getElementById('curso_' + id);
             if (checkbox.checked) {
-                // Abrimos modal
+               
                 if (!modals[id]) {
                     const modalEl = document.getElementById('modalHorarios_' + id);
                     modals[id] = new bootstrap.Modal(modalEl);
                 }
                 modals[id].show();
             } else {
-                // Si desmarcan, limpiamos selección
+                
                 document.getElementById('horario_hidden_' + id).value = "";
                 document.getElementById('select_horario_' + id).value = "";
             }
@@ -154,7 +154,7 @@ $cursosDisponibles = [
                 hiddenInput.value = horarioSeleccionado;
                 checkbox.checked = true;
             } else {
-                // Si no seleccionó horario, desmarcamos el checkbox para no enviar ese curso
+              
                 checkbox.checked = false;
                 hiddenInput.value = "";
                 alert("Debe seleccionar un horario para el curso.");
